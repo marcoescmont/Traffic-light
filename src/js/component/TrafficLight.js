@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "../../styles/index.scss";
 
 const TrafficLight = () => {
-	const [currentLight, nextLight] = useState("red");
+	const [currentLight, nextLight] = useState("");
 
 	let lightCircle = <h1 type="button" className="fas fa-circle"></h1>;
 	return (
@@ -10,7 +10,7 @@ const TrafficLight = () => {
 			<div
 				className={
 					currentLight == "red"
-						? "text-danger highlight"
+						? "text-danger highlight-red"
 						: "text-danger"
 				}
 				onClick={() => nextLight("red")}>
@@ -19,7 +19,7 @@ const TrafficLight = () => {
 			<div
 				className={
 					currentLight == "yellow"
-						? "text-warning highlight"
+						? "text-warning highlight-yellow"
 						: "text-warning"
 				}
 				onClick={() => nextLight("yellow")}>
@@ -28,7 +28,7 @@ const TrafficLight = () => {
 			<div
 				className={
 					currentLight == "green"
-						? "text-success highlight"
+						? "text-success highlight-green"
 						: "text-success"
 				}
 				onClick={() => nextLight("green")}>
